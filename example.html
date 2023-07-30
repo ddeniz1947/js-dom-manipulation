@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green {
+            color: green !important;
+        }
+
+        .orange {
+            color: orange !important;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="changeTextColorWithJs()">Change Text Color Red </button>
+    <button onclick="changeTextColorWithChangeClassName()">Change Text Color Green </button>
+    <button onclick="changeTextColorWithChangeClassList()"> Change Text Color Orange </button>
+    <button onclick="changeTextColorRedAgain()">Change Text Color Red Again</button>
+    <button onclick="changeTextColorGreenAgain()">Change Text Color Green Again</button>
+    <br>
+    <span id="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur minima eligendi aperiam natus
+        perferendis magni soluta excepturi inventore, ea non repellat labore ipsa dignissimos accusamus consectetur
+        minus. Itaque, exercitationem amet.</span>
+
+    <script>
+        function changeTextColorWithJs() {
+            document.getElementById("text").style.color = "red";
+        }
+
+        function changeTextColorWithChangeClassName() {
+            document.getElementById("text").className = "green";
+        }
+
+        function changeTextColorWithChangeClassList() {
+            document.getElementById("text").classList.add("orange");
+        }
+
+        function changeTextColorRedAgain() {
+            document.getElementById("text").style = "color :  red !important";
+        }
+
+        function changeTextColorGreenAgain() {
+            document.getElementById("text").setAttribute("style", "color : green !important");
+        }
+    </script>
+</body>
+
+</html>
